@@ -4,7 +4,7 @@ Submitted by: **Ivanna Shcheglyuk**
 
 About this web app: ****
 
-Time spent: **X** hours
+Time spent: **17** hours
 
 ## Required Features
 In this project, I built a Node.js web application that displays events happening in New York City. The application connects to a PostgreSQL database hosted on Render to store and retrieve event information.
