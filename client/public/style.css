@@ -1,0 +1,109 @@
+/* Page Background */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #060707, #d9e2ec); /* soft gradient */
+    color: #b9abab;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* warm gradient */
+    border-radius: 16px;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+header h1 {
+    color: #aab692;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(202, 7, 7, 0.3);
+}
+
+header p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #dbe9c9; /* contrast */
+    text-shadow: 1px 1px 3px rgba(193, 17, 242, 0.4);
+    margin-top: 10px;
+}
+
+/* Events Container */
+#events-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 10px;
+}
+
+/* Event Cards */
+.card {
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.card h3 {
+    margin: 15px;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 15px;
+    font-size: 0.95rem;
+    color: #837f7f;
+    line-height: 1.3;
+}
+
+/* Hover effects on cards */
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Text */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Event Detail page */
+#event-detail img {
+    width: 100%;        /* scale to container */
+    max-width: 500px;   /* prevents being too big */
+    height: auto;       /* keep ratio */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 1rem auto;
+    border-radius: 8px;
+}

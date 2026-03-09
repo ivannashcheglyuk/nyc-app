@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="event-name">Event Name</h1>
+        <p id="event-genre">Event Genre</p>
+    </header>
+
+    <main id="event-detail">
+        <img id="event-image" src="" alt="Event Image">
+        <p><strong>Date & Time:</strong> <span id="event-date"></span> at <span id="event-time"></span></p>
+        <p><strong>Venue:</strong> <span id="event-venue"></span></p>
+        <p><strong>Description:</strong> <span id="event-description">Loading...</span></p>
+        <button onclick="window.history.back()">Go Back</button>
+    </main>
+
+    <script type="module" src="js/eventDetail.js"></script>
+</body>
+</html>
