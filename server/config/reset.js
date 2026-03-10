@@ -1,7 +1,7 @@
+// server/config/reset.js
 import 'dotenv/config';
 import { pool } from './database.js';
-import { eventData } from '../data/events.js'; // <-- use eventData
-
+import { eventData } from '../data/events.js';
 
 // Create events table
 async function createEventsTable() {
@@ -15,7 +15,7 @@ async function createEventsTable() {
         venue VARCHAR(255) NOT NULL,
         genre VARCHAR(100),
         ticketprice VARCHAR(50),
-        image VARCHAR(255),
+        image TEXT,
         description TEXT
       );
     `);
@@ -28,11 +28,14 @@ async function createEventsTable() {
 // Insert initial event data
 async function seedEventsTable() {
   try {
+    // Delete old rows first to avoid duplicates
+    await pool.query('DELETE FROM events;');
+    console.log('🗑️ Old events deleted');
+
     for (let event of eventData) {
       await pool.query(
         `INSERT INTO events (name, date, time, venue, genre, ticketprice, image, description)
-         VALUES ($1, $2, $3, $4, $5, $6, $7, $8)
-         ON CONFLICT DO NOTHING;`,
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8);`,
         [
           event.name,
           event.date,
