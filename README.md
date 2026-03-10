@@ -20,7 +20,8 @@ To test the project, I ran the server locally using npm and confirmed that the d
 
 The following **optional** features are implemented:
 
-- [ ] The user can search for items by a specific attribute
+- [x] The user can search for items by a specific attribute
+ Added a search function that filters events by name and allows users to reset the results to view all events again.
 
 The following **additional** features are implemented:
 
